@@ -1,0 +1,81 @@
+[
+  {
+    "label": "70 kg, Hb 8, alvo 15: 70 × 7 × 2,4 + 500 = 1.676 mg",
+    "input": {
+      "peso": 70,
+      "hb": 8,
+      "alvo": 15
+    },
+    "expected": {
+      "raw": {
+        "hbiron": 1176,
+        "reserve": 500,
+        "total": 1676
+      },
+      "main": "1.676"
+    },
+    "originalInput": {
+      "peso": 70,
+      "hb": 8,
+      "alvo": 15
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "60 kg, Hb 10, alvo 15: 720 + 500 = 1.220 mg",
+    "input": {
+      "peso": 60,
+      "hb": 10,
+      "alvo": 15
+    },
+    "expected": {
+      "raw": {
+        "total": 1220
+      }
+    },
+    "originalInput": {
+      "peso": 60,
+      "hb": 10,
+      "alvo": 15
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Criança de 30 kg, Hb 9, alvo 13: 288 + 450 = 738 mg",
+    "input": {
+      "peso": 30,
+      "hb": 9,
+      "alvo": 13
+    },
+    "expected": {
+      "raw": {
+        "hbiron": 288,
+        "reserve": 450,
+        "total": 738
+      }
+    },
+    "originalInput": {
+      "peso": 30,
+      "hb": 9,
+      "alvo": 13
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Hb acima do alvo: erro",
+    "input": {
+      "peso": 70,
+      "hb": 15.5,
+      "alvo": 15
+    },
+    "expected": {
+      "error": true
+    },
+    "originalInput": {
+      "peso": 70,
+      "hb": 15.5,
+      "alvo": 15
+    },
+    "expandedZeroOptions": []
+  }
+]

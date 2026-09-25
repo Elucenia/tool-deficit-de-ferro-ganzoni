@@ -1,0 +1,185 @@
+{
+  "tool": {
+    "id": "deficit-de-ferro-ganzoni",
+    "title": "Déficit de ferro (Ganzoni)",
+    "short": "Dose total de ferro intravenoso",
+    "desc": "Fórmula de Ganzoni para o déficit total de ferro: peso × (Hb-alvo − Hb atual) × 2,4 + reserva, para planejar a dose de ferro intravenoso.",
+    "lead": "Estima quanto ferro elementar é preciso repor por via intravenosa para corrigir a hemoglobina e recompor as reservas na anemia ferropriva.",
+    "spec": [
+      "hematologia-e-hemoterapia",
+      "clinica-medica",
+      "gastroenterologia",
+      "nefrologia"
+    ],
+    "fields": [
+      [
+        "peso",
+        "Peso",
+        "num",
+        {
+          "min": 5,
+          "max": 250,
+          "step": 0.1,
+          "unit": "kg",
+          "ph": "70"
+        }
+      ],
+      [
+        "hb",
+        "Hemoglobina atual",
+        "num",
+        {
+          "min": 3,
+          "max": 18,
+          "step": 0.1,
+          "unit": "g/dL",
+          "ph": "8"
+        }
+      ],
+      [
+        "alvo",
+        "Hemoglobina-alvo",
+        "num",
+        {
+          "min": 8,
+          "max": 16,
+          "step": 0.1,
+          "unit": "g/dL",
+          "ph": "15"
+        }
+      ]
+    ],
+    "formula": "<p><strong>Déficit (mg) = peso (kg) × (Hb-alvo − Hb atual) (g/dL) × 2,4 + reserva de ferro</strong>.</p><p>Reserva: 500 mg se peso ≥ 35 kg; 15 mg/kg se &lt; 35 kg. Hb-alvo usual: 15 g/dL (≥ 35 kg) ou 13 g/dL (&lt; 35 kg). O fator 2,4 = volume sanguíneo (≈ 7% do peso) × ferro da hemoglobina (0,34%) × 10.</p>",
+    "table": [
+      [
+        "Peso",
+        "Hb-alvo usual",
+        "Reserva"
+      ],
+      [
+        "≥ 35 kg",
+        "15 g/dL",
+        "500 mg"
+      ],
+      [
+        "&lt; 35 kg",
+        "13 g/dL",
+        "15 mg/kg"
+      ]
+    ],
+    "tips": [
+      "A fórmula tende a subestimar a necessidade real: no estudo FERGIcor, um esquema simplificado pelo peso e pela Hb foi mais eficaz que o cálculo de Ganzoni.",
+      "Divida o total nas doses máximas por aplicação de cada formulação (por exemplo, sacarato de ferro em doses de até 200 mg; carboximaltose até 1.000 mg por semana, conforme bula).",
+      "No obeso, use o peso ideal ou o ajustado: com peso real, o volume sanguíneo é superestimado.",
+      "Reavalie ferritina e saturação de transferrina 4 a 8 semanas após a última dose, não logo depois (o ferro infundido eleva a ferritina de forma transitória)."
+    ],
+    "sources": [
+      [
+        "Ganzoni AM. Intravenöses Eisen-Dextran: therapeutische und experimentelle Möglichkeiten [Intravenous iron-dextran: therapeutic and experimental possibilities]. Schweiz Med Wochenschr, 1970.",
+        "https://pubmed.ncbi.nlm.nih.gov/5413918/"
+      ],
+      [
+        "Evstatiev R et al. FERGIcor, a randomized controlled trial on ferric carboxymaltose for iron deficiency anemia in inflammatory bowel disease. Gastroenterology, 2011.",
+        "https://doi.org/10.1053/j.gastro.2011.06.005"
+      ]
+    ],
+    "cases": [
+      [
+        "70 kg, Hb 8, alvo 15: 70 × 7 × 2,4 + 500 = 1.676 mg",
+        {
+          "peso": 70,
+          "hb": 8,
+          "alvo": 15
+        },
+        {
+          "raw": {
+            "hbiron": 1176,
+            "reserve": 500,
+            "total": 1676
+          },
+          "main": "1.676"
+        }
+      ],
+      [
+        "60 kg, Hb 10, alvo 15: 720 + 500 = 1.220 mg",
+        {
+          "peso": 60,
+          "hb": 10,
+          "alvo": 15
+        },
+        {
+          "raw": {
+            "total": 1220
+          }
+        }
+      ],
+      [
+        "Criança de 30 kg, Hb 9, alvo 13: 288 + 450 = 738 mg",
+        {
+          "peso": 30,
+          "hb": 9,
+          "alvo": 13
+        },
+        {
+          "raw": {
+            "hbiron": 288,
+            "reserve": 450,
+            "total": 738
+          }
+        }
+      ],
+      [
+        "Hb acima do alvo: erro",
+        {
+          "peso": 70,
+          "hb": 15.5,
+          "alvo": 15
+        },
+        {
+          "error": true
+        }
+      ]
+    ],
+    "batch": "onco-diagnostico",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "onco-diagnostico",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/onco-diagnostico.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 4,
+      "passed": 4,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "id": "deficit-de-ferro-ganzoni",
+    "status": "restricted",
+    "reason": "O valor principal é ferro total em mg para reposição IV, mas não há escolha de formulação, indicação ou esquema. A bula define limites por aplicação e curso diferentes do déficit estimado. Suspender até revisão independente farmacêutica e contextual.",
+    "sourceUrl": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/203565s027lbl.pdf",
+    "sourceTitle": "FDA — INJECTAFER prescribing information",
+    "sourceDate": "2025",
+    "publisherRegion": "Estados Unidos / FDA",
+    "checkedAt": "2026-09-25",
+    "clinicalValidation": "not-performed",
+    "reviewScope": "triagem por risco e finalidade da saída principal; sem validação clínica",
+    "suppressLegacyFormula": true,
+    "formulaOverride": "Ganzoni: déficit estimado (mg) = peso × (Hb-alvo − Hb atual) × 2,4 + reserva. Déficit calculado não é dose por administração nem seleção de formulação."
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/onco-diagnostico.php",
+    "sha256": "29e7fd6aab1f8bf937a34267255855c21f804696da2b4817d6197578cdcbe743",
+    "bytes": 78570
+  },
+  "clinicalValidation": "not-performed"
+}
