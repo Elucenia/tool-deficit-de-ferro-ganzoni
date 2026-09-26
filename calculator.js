@@ -1,4 +1,6 @@
-/* ELUCENIA standalone integration. Source package metadata and rights: README.md. */
+/* tool-deficit-de-ferro-ganzoni · Elucenia · https://github.com/Elucenia/tool-deficit-de-ferro-ganzoni
+   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+   Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"deficit-de-ferro-ganzoni","title":"Déficit de ferro (Ganzoni)","fields":[["peso","Peso","num",{"min":5,"max":250,"step":0.1,"unit":"kg","ph":"70"}],["hb","Hemoglobina atual","num",{"min":3,"max":18,"step":0.1,"unit":"g/dL","ph":"8"}],["alvo","Hemoglobina-alvo","num",{"min":8,"max":16,"step":0.1,"unit":"g/dL","ph":"15"}]],"config":null,"reviewStatus":"restricted","clinicalValidation":"not-performed"});
