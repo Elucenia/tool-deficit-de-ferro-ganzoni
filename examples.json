@@ -1,81 +1,174 @@
 [
   {
-    "label": "70 kg, Hb 8, alvo 15: 70 × 7 × 2,4 + 500 = 1.676 mg",
+    "id": "deficit-de-ferro-ganzoni",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "Vetor sintético principal de referência",
+    "originalInput": {
+      "peso": 70,
+      "hb": 8,
+      "alvo": 15,
+      "reserva": 500
+    },
     "input": {
       "peso": 70,
       "hb": 8,
-      "alvo": 15
+      "alvo": 15,
+      "reserva": 500
     },
+    "amendments": [],
     "expected": {
       "raw": {
         "hbiron": 1176,
         "reserve": 500,
         "total": 1676
       },
-      "main": "1.676"
+      "main": "1.676,0"
     },
-    "originalInput": {
-      "peso": 70,
-      "hb": 8,
-      "alvo": 15
-    },
-    "expandedZeroOptions": []
-  },
-  {
-    "label": "60 kg, Hb 10, alvo 15: 720 + 500 = 1.220 mg",
-    "input": {
-      "peso": 60,
-      "hb": 10,
-      "alvo": 15
-    },
-    "expected": {
+    "recordedResult": {
+      "main": [
+        "1.676,0",
+        "mg"
+      ],
+      "label": "Ganzoni · déficit total",
       "raw": {
-        "total": 1220
+        "hbiron": 1176,
+        "reserve": 500,
+        "total": 1676
       }
     },
-    "originalInput": {
-      "peso": 60,
-      "hb": 10,
-      "alvo": 15
-    },
-    "expandedZeroOptions": []
+    "provenance": {
+      "receiptSha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7",
+      "scope": "Existing documented synthetic reference and precise source-audit regression baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Criança de 30 kg, Hb 9, alvo 13: 288 + 450 = 738 mg",
-    "input": {
-      "peso": 30,
-      "hb": 9,
-      "alvo": 13
+    "id": "deficit-de-ferro-ganzoni",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "Exemplo CADTH:50kg Hb11 alvo15 reserva500",
+    "originalInput": {
+      "peso": 50,
+      "hb": 11,
+      "alvo": 15,
+      "reserva": 500
     },
+    "input": {
+      "peso": 50,
+      "hb": 11,
+      "alvo": 15,
+      "reserva": 500
+    },
+    "amendments": [],
     "expected": {
       "raw": {
-        "hbiron": 288,
-        "reserve": 450,
-        "total": 738
+        "hbiron": 480,
+        "reserve": 500,
+        "total": 980
+      },
+      "main": "980,0"
+    },
+    "recordedResult": {
+      "main": [
+        "980,0",
+        "mg"
+      ],
+      "label": "Ganzoni · déficit total",
+      "raw": {
+        "hbiron": 480,
+        "reserve": 500,
+        "total": 980
       }
     },
-    "originalInput": {
-      "peso": 30,
-      "hb": 9,
-      "alvo": 13
-    },
-    "expandedZeroOptions": []
+    "provenance": {
+      "receiptSha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7",
+      "scope": "Existing documented synthetic reference and precise source-audit regression baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Hb acima do alvo: erro",
-    "input": {
-      "peso": 70,
-      "hb": 15.5,
-      "alvo": 15
-    },
-    "expected": {
-      "error": true
-    },
+    "id": "deficit-de-ferro-ganzoni",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "Exemplo CADTH:70kg Hb9 alvo15 reserva1000",
     "originalInput": {
       "peso": 70,
-      "hb": 15.5,
-      "alvo": 15
+      "hb": 9,
+      "alvo": 15,
+      "reserva": 1000
     },
-    "expandedZeroOptions": []
+    "input": {
+      "peso": 70,
+      "hb": 9,
+      "alvo": 15,
+      "reserva": 1000
+    },
+    "amendments": [],
+    "expected": {
+      "raw": {
+        "hbiron": 1008,
+        "reserve": 1000,
+        "total": 2008
+      },
+      "main": "2.008,0"
+    },
+    "recordedResult": {
+      "main": [
+        "2.008,0",
+        "mg"
+      ],
+      "label": "Ganzoni · déficit total",
+      "raw": {
+        "hbiron": 1008,
+        "reserve": 1000,
+        "total": 2008
+      }
+    },
+    "provenance": {
+      "receiptSha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7",
+      "scope": "Existing documented synthetic reference and precise source-audit regression baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "deficit-de-ferro-ganzoni",
+    "kind": "native-source-reference",
+    "index": 3,
+    "name": "Reserva zero explícita; Hb=alvo",
+    "originalInput": {
+      "peso": 70,
+      "hb": 15,
+      "alvo": 15,
+      "reserva": 0
+    },
+    "input": {
+      "peso": 70,
+      "hb": 15,
+      "alvo": 15,
+      "reserva": 0
+    },
+    "amendments": [],
+    "expected": {
+      "raw": {
+        "hbiron": 0,
+        "reserve": 0,
+        "total": 0
+      },
+      "main": "0,0"
+    },
+    "recordedResult": {
+      "main": [
+        "0,0",
+        "mg"
+      ],
+      "label": "Ganzoni · déficit total",
+      "raw": {
+        "hbiron": 0,
+        "reserve": 0,
+        "total": 0
+      }
+    },
+    "provenance": {
+      "receiptSha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7",
+      "scope": "Existing documented synthetic reference and precise source-audit regression baseline; no new independent oracle"
+    }
   }
 ]

@@ -1,0 +1,270 @@
+{
+  "schema": "elucenia-current-per-tool-local-publication-candidate",
+  "id": "deficit-de-ferro-ganzoni",
+  "repository": "Elucenia/tool-deficit-de-ferro-ganzoni",
+  "parentCommitSha": "685d01c467d1c3502871edb088cdee778161d73c",
+  "baseTreeSha": "a1fdf9f09b8bb892dd357729a0a6d20d874c4cd5",
+  "protectedFiles": {
+    "LICENSE": {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "size": 11358,
+      "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/d645695673349e3947e8e5ae42332d0ac3164cd7"
+    },
+    "NOTICE": {
+      "path": "NOTICE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acb8b9ea78b0f3579ddfa91e9e0c82c935635887",
+      "size": 1652,
+      "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/acb8b9ea78b0f3579ddfa91e9e0c82c935635887"
+    },
+    "AUTHORSHIP.md": {
+      "path": "AUTHORSHIP.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17687ad22f12b81cb419bb05fb7e0e2bd33b8381",
+      "size": 3323,
+      "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/17687ad22f12b81cb419bb05fb7e0e2bd33b8381"
+    },
+    "CITATION.cff": {
+      "path": "CITATION.cff",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f06ee5422db201e6d62bd15fa0268abbda55b7fa",
+      "size": 931,
+      "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/f06ee5422db201e6d62bd15fa0268abbda55b7fa"
+    },
+    "SECURITY.md": {
+      "path": "SECURITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44eafb996937916cbe53e24fa9c5208fe03d5767",
+      "size": 894,
+      "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/44eafb996937916cbe53e24fa9c5208fe03d5767"
+    },
+    "CONTRIBUTING.md": {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c52ca42d41e4d1d913ba00628aa9e05ae57cc5f",
+      "size": 1475,
+      "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/6c52ca42d41e4d1d913ba00628aa9e05ae57cc5f"
+    },
+    ".github/workflows/ci.yml": {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d3f2f34aa2e948d30695d82d64361467d9e6485",
+      "size": 279,
+      "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/7d3f2f34aa2e948d30695d82d64361467d9e6485"
+    },
+    ".gitattributes": {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+      "size": 19,
+      "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/6313b56c57848efce05faa7aa7e901ccfc2886ea"
+    },
+    ".gitignore": {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e375bd25cf1a574310ac4c7af0299884556e81e1",
+      "size": 42,
+      "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/e375bd25cf1a574310ac4c7af0299884556e81e1"
+    }
+  },
+  "oldCandidate": {
+    "manifest": {
+      "file": "reports/review-20261003/github-publication-candidate-final36-v4.json",
+      "bytes": 6823260,
+      "sha256": "a3c528b12d7b5416fa0e62dda9e5106864bae7ff86710fa765934b5a3069e16c"
+    },
+    "rowId": "deficit-de-ferro-ganzoni",
+    "publicationProvenance": {
+      "file": "reports/review-20261003/github-publication-candidates-final36-v4/deficit-de-ferro-ganzoni/publication-provenance.json",
+      "bytes": 5263,
+      "sha256": "8fe00072108f64787f47f9b88857fd3c1f32160dc79e2939f4d6581166d232d6"
+    },
+    "integrationProvenance": {
+      "file": "reports/review-20261003/github-publication-candidates-final36-v4/deficit-de-ferro-ganzoni/provenance.json",
+      "bytes": 38946,
+      "sha256": "4d9a3fc9571099f5bd7cd4137e85ae72a473fa2789399b7403ecb2b67739efeb"
+    }
+  },
+  "currentSource": {
+    "file": "apps/website/private/tool-code/deficit-de-ferro-ganzoni/calculator.js",
+    "bytes": 509,
+    "sha256": "c1235a2c3390622efe2e656ffdd8b0030641e3ee9d2d5a9ce80341f94a5e4541"
+  },
+  "sourceToolSha256": "0f4baf2af1efed532926265daad4108d60809ff0feda13147834344c3cd02f32",
+  "methodVersion": "Ganzoni 1970; cálculo de déficit total",
+  "implementationVersion": "deficit-de-ferro-ganzoni@native-2026-10-04+c1235a2c3390",
+  "browserBundleSha256": "2970bc2e603f9867eb8394272474c8528a1111804616fa14663b67bb9f2f1f99",
+  "graph": {
+    "entry": "tool-code/deficit-de-ferro-ganzoni/calculator.js",
+    "modules": [
+      {
+        "file": "tool-code/deficit-de-ferro-ganzoni/calculator.js",
+        "bytes": 509,
+        "sha256": "c1235a2c3390622efe2e656ffdd8b0030641e3ee9d2d5a9ce80341f94a5e4541"
+      },
+      {
+        "file": "restored-methods.cjs",
+        "bytes": 4532,
+        "sha256": "20fcd7f30ef08735c76a27f7506ad692a0cfc75f7047499a4e63a0f247b7a045"
+      },
+      {
+        "file": "restoration-original-tools.json",
+        "bytes": 1264,
+        "sha256": "6ab9eb71e4b5bc3d65f5821a217138b731f13aec21fa58dd83f92ed400e44eaf"
+      }
+    ],
+    "transforms": [
+      {
+        "file": "restored-methods.cjs",
+        "sourceSha256": "630dccade18742e4bc364b32f4ef4d6bc75aeceb262face8ddae806be7962c23",
+        "kind": "Deterministic AST selection of one existing define call plus unchanged shared arithmetic/schema helpers",
+        "selectedId": "deficit-de-ferro-ganzoni",
+        "otherMethodDefinitionsIncluded": 0
+      },
+      {
+        "file": "restoration-original-tools.json",
+        "sourceSha256": "ccee00665e024104d254acf77a43609acb02d593e016ee8c6b7cebf3769da389",
+        "kind": "One original field/source contract only; no other tools, reference banks or original results",
+        "selectedId": "deficit-de-ferro-ganzoni",
+        "keys": [
+          "id",
+          "title",
+          "fields",
+          "sources"
+        ]
+      }
+    ]
+  },
+  "currentActualHttpEvidence": {
+    "file": "reports/review-20261005-completion/deploy-lock/r5-all-calculators-http-results.json",
+    "bytes": 7105457,
+    "sha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7"
+  },
+  "tests": {
+    "cases": 4,
+    "sourceNodeParityPassed": true,
+    "browserVmParityPassed": true,
+    "independentOracleDerived": false,
+    "actualBrowserDOMVerified": false
+  },
+  "rights": {
+    "historicalPayloadLicenseDeclaration": "Apache-2.0",
+    "currentIntegrationPackageLicenseDeclaration": "MIT",
+    "currentLegalFiles": [
+      {
+        "file": "apps/command-center/private/tool-code/deficit-de-ferro-ganzoni/LICENSE",
+        "bytes": 1229,
+        "sha256": "51c010d285894558695812b9883d9c9ae7c9c89526f43597917e778965e65d93"
+      },
+      {
+        "file": "apps/command-center/private/tool-code/deficit-de-ferro-ganzoni/NOTICE.md",
+        "bytes": 1183,
+        "sha256": "b7d5eaa1074d1673caf885ac49b38e9b54b2c6086b45072eacf7b3fe139d8a6d"
+      }
+    ],
+    "protectedFilesPreservedFromOldPayload": [],
+    "protectedRemoteAttributionReferences": {
+      "LICENSE": {
+        "path": "LICENSE",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+        "size": 11358,
+        "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/d645695673349e3947e8e5ae42332d0ac3164cd7"
+      },
+      "NOTICE": {
+        "path": "NOTICE",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "acb8b9ea78b0f3579ddfa91e9e0c82c935635887",
+        "size": 1652,
+        "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/acb8b9ea78b0f3579ddfa91e9e0c82c935635887"
+      },
+      "AUTHORSHIP.md": {
+        "path": "AUTHORSHIP.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "17687ad22f12b81cb419bb05fb7e0e2bd33b8381",
+        "size": 3323,
+        "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/17687ad22f12b81cb419bb05fb7e0e2bd33b8381"
+      },
+      "CITATION.cff": {
+        "path": "CITATION.cff",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f06ee5422db201e6d62bd15fa0268abbda55b7fa",
+        "size": 931,
+        "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/f06ee5422db201e6d62bd15fa0268abbda55b7fa"
+      },
+      "SECURITY.md": {
+        "path": "SECURITY.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "44eafb996937916cbe53e24fa9c5208fe03d5767",
+        "size": 894,
+        "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/44eafb996937916cbe53e24fa9c5208fe03d5767"
+      },
+      "CONTRIBUTING.md": {
+        "path": "CONTRIBUTING.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6c52ca42d41e4d1d913ba00628aa9e05ae57cc5f",
+        "size": 1475,
+        "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/6c52ca42d41e4d1d913ba00628aa9e05ae57cc5f"
+      },
+      ".github/workflows/ci.yml": {
+        "path": ".github/workflows/ci.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7d3f2f34aa2e948d30695d82d64361467d9e6485",
+        "size": 279,
+        "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/7d3f2f34aa2e948d30695d82d64361467d9e6485"
+      },
+      ".gitattributes": {
+        "path": ".gitattributes",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+        "size": 19,
+        "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/6313b56c57848efce05faa7aa7e901ccfc2886ea"
+      },
+      ".gitignore": {
+        "path": ".gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e375bd25cf1a574310ac4c7af0299884556e81e1",
+        "size": 42,
+        "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/e375bd25cf1a574310ac4c7af0299884556e81e1"
+      }
+    },
+    "sourceSpecificEvidence": {
+      "sourceSpecificStatus": "not-approved-by-this-consolidation",
+      "sourceSpecificEvidence": null,
+      "wholeInstrumentApproval": false,
+      "oldCandidateInstrumentRightsApproval": "not-performed"
+    },
+    "scope": "Historical Apache declaration and current MIT integration notices retained with exact sources; no relicensing or instrument approval inferred",
+    "reviewRequired": true,
+    "divergences": [
+      "Historical payload and current package declare different license labels; scope/authorship mapping must be reviewed before distribution"
+    ],
+    "wholeInstrumentApproval": false
+  },
+  "appWrites": false,
+  "externalMutations": false,
+  "publicationPerformed": false,
+  "externalPublicationReady": false,
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}

@@ -2,9 +2,10 @@
   "tool": {
     "id": "deficit-de-ferro-ganzoni",
     "title": "Déficit de ferro (Ganzoni)",
-    "short": "Dose total de ferro intravenoso",
-    "desc": "Fórmula de Ganzoni para o déficit total de ferro: peso × (Hb-alvo − Hb atual) × 2,4 + reserva, para planejar a dose de ferro intravenoso.",
-    "lead": "Estima quanto ferro elementar é preciso repor por via intravenosa para corrigir a hemoglobina e recompor as reservas na anemia ferropriva.",
+    "short": "Déficit total pelo alvo de hemoglobina e reserva informados",
+    "desc": "Calcula o déficit total de ferro com o alvo de hemoglobina e a reserva previamente definidos pelo profissional. O resultado não determina uma indicação, uma dose por aplicação ou um esquema de administração.",
+    "lead": "Calcula o déficit total de ferro com o alvo de hemoglobina e a reserva previamente definidos pelo profissional. O resultado não determina uma indicação, uma dose por aplicação ou um esquema de administração.",
+    "kind": "Calculadora",
     "spec": [
       "hematologia-e-hemoterapia",
       "clinica-medica",
@@ -47,33 +48,24 @@
           "unit": "g/dL",
           "ph": "15"
         }
-      ]
-    ],
-    "formula": "<p><strong>Déficit (mg) = peso (kg) × (Hb-alvo − Hb atual) (g/dL) × 2,4 + reserva de ferro</strong>.</p><p>Reserva: 500 mg se peso ≥ 35 kg; 15 mg/kg se &lt; 35 kg. Hb-alvo usual: 15 g/dL (≥ 35 kg) ou 13 g/dL (&lt; 35 kg). O fator 2,4 = volume sanguíneo (≈ 7% do peso) × ferro da hemoglobina (0,34%) × 10.</p>",
-    "table": [
-      [
-        "Peso",
-        "Hb-alvo usual",
-        "Reserva"
       ],
       [
-        "≥ 35 kg",
-        "15 g/dL",
-        "500 mg"
-      ],
-      [
-        "&lt; 35 kg",
-        "13 g/dL",
-        "15 mg/kg"
+        "reserva",
+        "Reserva de ferro definida no protocolo",
+        "num",
+        {
+          "min": 0,
+          "max": 2000,
+          "unit": "mg"
+        }
       ]
     ],
-    "tips": [
-      "A fórmula tende a subestimar a necessidade real: no estudo FERGIcor, um esquema simplificado pelo peso e pela Hb foi mais eficaz que o cálculo de Ganzoni.",
-      "Divida o total nas doses máximas por aplicação de cada formulação (por exemplo, sacarato de ferro em doses de até 200 mg; carboximaltose até 1.000 mg por semana, conforme bula).",
-      "No obeso, use o peso ideal ou o ajustado: com peso real, o volume sanguíneo é superestimado.",
-      "Reavalie ferritina e saturação de transferrina 4 a 8 semanas após a última dose, não logo depois (o ferro infundido eleva a ferritina de forma transitória)."
-    ],
+    "formula": "<p>Déficit total (mg) = peso (kg) × (Hb-alvo − Hb atual) (g/dL) × 2,4 + reserva informada (mg).</p>",
     "sources": [
+      [
+        "CADTH · Monoferric · tabela 12: fórmula de Ganzoni e exemplos",
+        "https://www.cda-amc.ca/sites/default/files/cdr/pharmacoeconomic/sr0622-monoferric-pharmacoeconomic-review-report.pdf"
+      ],
       [
         "Ganzoni AM. Intravenöses Eisen-Dextran: therapeutische und experimentelle Möglichkeiten [Intravenous iron-dextran: therapeutic and experimental possibilities]. Schweiz Med Wochenschr, 1970.",
         "https://pubmed.ncbi.nlm.nih.gov/5413918/"
@@ -85,11 +77,12 @@
     ],
     "cases": [
       [
-        "70 kg, Hb 8, alvo 15: 70 × 7 × 2,4 + 500 = 1.676 mg",
+        "Vetor sintético principal de referência",
         {
           "peso": 70,
           "hb": 8,
-          "alvo": 15
+          "alvo": 15,
+          "reserva": 500
         },
         {
           "raw": {
@@ -97,80 +90,382 @@
             "reserve": 500,
             "total": 1676
           },
-          "main": "1.676"
+          "main": "1.676,0"
         }
       ],
       [
-        "60 kg, Hb 10, alvo 15: 720 + 500 = 1.220 mg",
+        "Exemplo CADTH:50kg Hb11 alvo15 reserva500",
         {
-          "peso": 60,
-          "hb": 10,
-          "alvo": 15
+          "peso": 50,
+          "hb": 11,
+          "alvo": 15,
+          "reserva": 500
         },
         {
           "raw": {
-            "total": 1220
-          }
+            "hbiron": 480,
+            "reserve": 500,
+            "total": 980
+          },
+          "main": "980,0"
         }
       ],
       [
-        "Criança de 30 kg, Hb 9, alvo 13: 288 + 450 = 738 mg",
-        {
-          "peso": 30,
-          "hb": 9,
-          "alvo": 13
-        },
-        {
-          "raw": {
-            "hbiron": 288,
-            "reserve": 450,
-            "total": 738
-          }
-        }
-      ],
-      [
-        "Hb acima do alvo: erro",
+        "Exemplo CADTH:70kg Hb9 alvo15 reserva1000",
         {
           "peso": 70,
-          "hb": 15.5,
-          "alvo": 15
+          "hb": 9,
+          "alvo": 15,
+          "reserva": 1000
         },
         {
-          "error": true
+          "raw": {
+            "hbiron": 1008,
+            "reserve": 1000,
+            "total": 2008
+          },
+          "main": "2.008,0"
+        }
+      ],
+      [
+        "Reserva zero explícita; Hb=alvo",
+        {
+          "peso": 70,
+          "hb": 15,
+          "alvo": 15,
+          "reserva": 0
+        },
+        {
+          "raw": {
+            "hbiron": 0,
+            "reserve": 0,
+            "total": 0
+          },
+          "main": "0,0"
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
-      "testedAt": "2026-09-25",
+      "testedAt": "2026-10-03",
       "total": 4,
       "passed": 4,
-      "failures": []
+      "failures": [],
+      "evidencePath": "reports/review-20261003/restored-methods-source-rules.json",
+      "scope": "Synthetic source-rule arithmetic checks. Independent clinical validation not performed."
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
-    }
-  },
-  "review": {
-    "id": "deficit-de-ferro-ganzoni",
-    "status": "restricted",
-    "reason": "O valor principal é ferro total em mg para reposição IV, mas não há escolha de formulação, indicação ou esquema. A bula define limites por aplicação e curso diferentes do déficit estimado. Suspender até revisão independente farmacêutica e contextual.",
-    "sourceUrl": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/203565s027lbl.pdf",
-    "sourceTitle": "FDA — INJECTAFER prescribing information",
-    "sourceDate": "2025",
-    "publisherRegion": "Estados Unidos / FDA",
-    "checkedAt": "2026-09-25",
+      "status": "passed",
+      "testedAt": "2026-10-03",
+      "total": 26,
+      "passed": 26,
+      "evidencePath": "reports/review-20261003/restored-methods-source-rules.json",
+      "scope": "Independent expected values and source-rule boundary checks; not clinical approval.",
+      "sourceRowCount": 26,
+      "uniqueApiInputCount": 21,
+      "inputIdentity": {
+        "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+        "audit": {
+          "file": "reports/review-20261003/independent-source-corpus-input-identity-audit-final25.json",
+          "sha256": "35d65e84c5608a5f572fce6837f0a8c101b2266f5d6eec32a3d60d2bb6b022ca"
+        },
+        "sourceRows": 26,
+        "uniqueApiInputs": 21,
+        "duplicateRows": 5,
+        "duplicates": [
+          {
+            "first": 7,
+            "repeat": 10,
+            "input": {
+              "peso": null,
+              "hb": 8,
+              "alvo": 15,
+              "reserva": 500
+            }
+          },
+          {
+            "first": 12,
+            "repeat": 15,
+            "input": {
+              "peso": 70,
+              "hb": null,
+              "alvo": 15,
+              "reserva": 500
+            }
+          },
+          {
+            "first": 17,
+            "repeat": 20,
+            "input": {
+              "peso": 70,
+              "hb": 8,
+              "alvo": null,
+              "reserva": 500
+            }
+          },
+          {
+            "first": 5,
+            "repeat": 22,
+            "input": {
+              "peso": 70,
+              "hb": 8,
+              "alvo": 15,
+              "reserva": null
+            }
+          },
+          {
+            "first": 5,
+            "repeat": 25,
+            "input": {
+              "peso": 70,
+              "hb": 8,
+              "alvo": 15,
+              "reserva": null
+            }
+          }
+        ],
+        "coverageStatusUnchanged": true
+      },
+      "publicCandidateBankOmitted": true
+    },
+    "limits": "Hb-alvo e reserva são informados pelo profissional; não há seleção automática. O déficit total não é dose por aplicação, esquema de administração nem indicação de ferro intravenoso.",
+    "methodVersion": "Ganzoni 1970; cálculo de déficit total",
+    "currentMethodSource": {
+      "title": "CADTH · Monoferric · tabela 12: fórmula de Ganzoni e exemplos",
+      "url": "https://www.cda-amc.ca/sites/default/files/cdr/pharmacoeconomic/sr0622-monoferric-pharmacoeconomic-review-report.pdf",
+      "version": "Ganzoni 1970; cálculo de déficit total",
+      "checkedAt": "2026-10-03",
+      "access": "official-drug-assessment"
+    },
+    "primaryVerification": {
+      "url": "https://www.cda-amc.ca/sites/default/files/cdr/pharmacoeconomic/sr0622-monoferric-pharmacoeconomic-review-report.pdf",
+      "checked": "Tabela 12 do relatório CADTH: fórmula de Ganzoni, hemoglobina em g/dL, fator 2,4 e reserva de ferro informada separadamente. Reproduzidos os exemplos fixos de 980 mg e 2.008 mg.",
+      "access": "official-drug-assessment"
+    },
     "clinicalValidation": "not-performed",
-    "reviewScope": "triagem por risco e finalidade da saída principal; sem validação clínica",
-    "suppressLegacyFormula": true,
-    "formulaOverride": "Ganzoni: déficit estimado (mg) = peso × (Hb-alvo − Hb atual) × 2,4 + reserva. Déficit calculado não é dose por administração nem seleção de formulação."
+    "languageReview": "not-performed",
+    "reviewStatus": "needs-review",
+    "implementationStatus": "available",
+    "versionEvidence": {
+      "status": "explicit-implemented-variant-and-existing-source-proofs-recorded",
+      "checkedAt": "2026-10-04T17:52:09.841Z",
+      "declaredMethodVersion": "Ganzoni 1970; cálculo de déficit total",
+      "implementedVariant": "Déficit total (mg) = peso (kg) × (Hb-alvo − Hb atual) (g/dL) × 2,4 + reserva informada (mg).",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "peso",
+            "label": "Peso",
+            "type": "num",
+            "min": 5,
+            "max": 250,
+            "unit": "kg",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "hb",
+            "label": "Hemoglobina atual",
+            "type": "num",
+            "min": 3,
+            "max": 18,
+            "unit": "g/dL",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "alvo",
+            "label": "Hemoglobina-alvo",
+            "type": "num",
+            "min": 8,
+            "max": 16,
+            "unit": "g/dL",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "reserva",
+            "label": "Reserva de ferro definida no protocolo",
+            "type": "num",
+            "min": 0,
+            "max": 2000,
+            "unit": "mg",
+            "optional": false,
+            "options": null
+          }
+        ],
+        "hash": "3d3ea047941978010aea31763c1edf4559dd44d11d2ec4f31c8557614514857a",
+        "hashInputDefinition": "SHA256 of UTF8 JSON.stringify({id:tool.id,fields:tool.fields,formula:tool.formula,config:tool.config||null}), preserving declared order/value types; not a hash of versionEvidence.inputContract.fields display projection."
+      },
+      "sourceEditions": [
+        {
+          "citation": "CADTH · Monoferric · tabela 12: fórmula de Ganzoni e exemplos",
+          "url": "https://www.cda-amc.ca/sites/default/files/cdr/pharmacoeconomic/sr0622-monoferric-pharmacoeconomic-review-report.pdf",
+          "class": "existing-source-record-transcribed",
+          "declaredCitationPreserved": true,
+          "sourceIdentityRecheckedInThisNormalization": false,
+          "publicationEditionConfirmationInThisNormalization": "not-performed",
+          "fullTextRetrievalInThisNormalization": false,
+          "formulaConformance": "not-assessed"
+        },
+        {
+          "citation": "Ganzoni AM. Intravenöses Eisen-Dextran: therapeutische und experimentelle Möglichkeiten [Intravenous iron-dextran: therapeutic and experimental possibilities]. Schweiz Med Wochenschr, 1970.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/5413918/",
+          "class": "existing-source-record-transcribed",
+          "declaredCitationPreserved": true,
+          "sourceIdentityRecheckedInThisNormalization": false,
+          "publicationEditionConfirmationInThisNormalization": "not-performed",
+          "fullTextRetrievalInThisNormalization": false,
+          "formulaConformance": "not-assessed"
+        },
+        {
+          "citation": "Evstatiev R et al. FERGIcor, a randomized controlled trial on ferric carboxymaltose for iron deficiency anemia in inflammatory bowel disease. Gastroenterology, 2011.",
+          "url": "https://doi.org/10.1053/j.gastro.2011.06.005",
+          "class": "existing-source-record-transcribed",
+          "declaredCitationPreserved": true,
+          "sourceIdentityRecheckedInThisNormalization": false,
+          "publicationEditionConfirmationInThisNormalization": "not-performed",
+          "fullTextRetrievalInThisNormalization": false,
+          "formulaConformance": "not-assessed"
+        }
+      ],
+      "existingSourceEvidence": {
+        "currentMethodSource": {
+          "title": "CADTH · Monoferric · tabela 12: fórmula de Ganzoni e exemplos",
+          "url": "https://www.cda-amc.ca/sites/default/files/cdr/pharmacoeconomic/sr0622-monoferric-pharmacoeconomic-review-report.pdf",
+          "version": "Ganzoni 1970; cálculo de déficit total",
+          "checkedAt": "2026-10-03",
+          "access": "official-drug-assessment"
+        },
+        "primaryVerification": {
+          "url": "https://www.cda-amc.ca/sites/default/files/cdr/pharmacoeconomic/sr0622-monoferric-pharmacoeconomic-review-report.pdf",
+          "checked": "Tabela 12 do relatório CADTH: fórmula de Ganzoni, hemoglobina em g/dL, fator 2,4 e reserva de ferro informada separadamente. Reproduzidos os exemplos fixos de 980 mg e 2.008 mg.",
+          "access": "official-drug-assessment"
+        }
+      },
+      "editionRecordingScope": "The methodVersion and all previously recorded source access/edition proofs are transcribed unchanged. This technical normalization makes no new bibliographic/full-text/source-formula confirmation; named existing read scopes remain in existingSourceEvidence. A missing standardized container did not mean the method edition was missing.",
+      "publicationEditionConfirmationReevaluated": false,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by technical hashes or metadata normalization; retain existing bounded source arithmetic and clinical review separately.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-03",
+        "total": 26,
+        "passed": 26,
+        "evidencePath": "reports/review-20261003/restored-methods-source-rules.json",
+        "scope": "Independent expected values and source-rule boundary checks; not clinical approval.",
+        "sourceRowCount": 26,
+        "uniqueApiInputCount": 21,
+        "inputIdentity": {
+          "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+          "audit": {
+            "file": "reports/review-20261003/independent-source-corpus-input-identity-audit-final25.json",
+            "sha256": "35d65e84c5608a5f572fce6837f0a8c101b2266f5d6eec32a3d60d2bb6b022ca"
+          },
+          "sourceRows": 26,
+          "uniqueApiInputs": 21,
+          "duplicateRows": 5,
+          "duplicates": [
+            {
+              "first": 7,
+              "repeat": 10,
+              "input": {
+                "peso": null,
+                "hb": 8,
+                "alvo": 15,
+                "reserva": 500
+              }
+            },
+            {
+              "first": 12,
+              "repeat": 15,
+              "input": {
+                "peso": 70,
+                "hb": null,
+                "alvo": 15,
+                "reserva": 500
+              }
+            },
+            {
+              "first": 17,
+              "repeat": 20,
+              "input": {
+                "peso": 70,
+                "hb": 8,
+                "alvo": null,
+                "reserva": 500
+              }
+            },
+            {
+              "first": 5,
+              "repeat": 22,
+              "input": {
+                "peso": 70,
+                "hb": 8,
+                "alvo": 15,
+                "reserva": null
+              }
+            },
+            {
+              "first": 5,
+              "repeat": 25,
+              "input": {
+                "peso": 70,
+                "hb": 8,
+                "alvo": 15,
+                "reserva": null
+              }
+            }
+          ],
+          "coverageStatusUnchanged": true
+        },
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "implementationHash": "c1235a2c3390622efe2e656ffdd8b0030641e3ee9d2d5a9ce80341f94a5e4541",
+      "implementationHashScope": "Exact current calculator.js bytes, individually verified in three app mirrors. This is not a full dependency-closure hash.",
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-04T17:52:09.841Z",
+          "scope": "First standardized container; explicit existing methodVersion and source proof objects preserved.",
+          "priorStandardizedContainerPresent": false,
+          "priorImplementationVersion": null,
+          "explicitMethodVersion": "Ganzoni 1970; cálculo de déficit total",
+          "sourceEvidenceSha256": "e3d9be341f021708ff9fa76d01f85de66702bb1bc61ee8f33ef091d8951b3b3f",
+          "metadataAudit": {
+            "file": "reports/review-20261003/native-technical-bindings-audit-publication-final26.json",
+            "sha256": "e615fa3a42555f8fbeb4de8763893c3e981a73eae4c8c1994b33727e19ebd8c8"
+          }
+        }
+      ]
+    },
+    "implementationVersion": "deficit-de-ferro-ganzoni@native-2026-10-04+c1235a2c3390"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "0f4baf2af1efed532926265daad4108d60809ff0feda13147834344c3cd02f32",
+  "omittedFullReferenceBanks": [
+    {
+      "at": "independentArithmeticTest.cases",
+      "rows": 26,
+      "sha256": "98a279dbe383aa2604d10023b2202f2229df6e396a2f9d7e42b57a1820630966",
+      "reason": "Full independent reference bank omitted from standalone public candidate; original evidence references retained"
+    },
+    {
+      "at": "versionEvidence.independentArithmetic.cases",
+      "rows": 26,
+      "sha256": "98a279dbe383aa2604d10023b2202f2229df6e396a2f9d7e42b57a1820630966",
+      "reason": "Embedded complete independent bank omitted; edition, scope and evidence references retained"
+    }
+  ],
+  "currentSource": {
+    "file": "apps/website/private/tool-code/deficit-de-ferro-ganzoni/calculator.js",
+    "bytes": 509,
+    "sha256": "c1235a2c3390622efe2e656ffdd8b0030641e3ee9d2d5a9ce80341f94a5e4541"
+  },
+  "clinicalValidation": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

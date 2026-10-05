@@ -1,0 +1,609 @@
+{
+  "at": "2026-10-05T15:24:36.194Z",
+  "id": "deficit-de-ferro-ganzoni",
+  "engine": {
+    "file": "apps/website/private/tool-code/deficit-de-ferro-ganzoni/calculator.js",
+    "bytes": 509,
+    "sha256": "c1235a2c3390622efe2e656ffdd8b0030641e3ee9d2d5a9ce80341f94a5e4541"
+  },
+  "sourceParity": "Node current source / per-tool browser VM outputs match",
+  "cases": [
+    {
+      "id": "deficit-de-ferro-ganzoni",
+      "index": 0,
+      "name": "Vetor sintético principal de referência",
+      "input": {
+        "peso": 70,
+        "hb": 8,
+        "alvo": 15,
+        "reserva": 500
+      },
+      "expected": {
+        "raw": {
+          "hbiron": 1176,
+          "reserve": 500,
+          "total": 1676
+        },
+        "main": "1.676,0"
+      },
+      "obtained": {
+        "id": "deficit-de-ferro-ganzoni",
+        "main": [
+          "1.676,0",
+          "mg"
+        ],
+        "label": "Ganzoni · déficit total",
+        "raw": {
+          "hbiron": 1176,
+          "reserve": 500,
+          "total": 1676
+        },
+        "methodVersion": "Ganzoni 1970; cálculo de déficit total",
+        "clinicalValidation": "not-performed"
+      },
+      "browserVm": {
+        "id": "deficit-de-ferro-ganzoni",
+        "main": [
+          "1.676,0",
+          "mg"
+        ],
+        "label": "Ganzoni · déficit total",
+        "raw": {
+          "hbiron": 1176,
+          "reserve": 500,
+          "total": 1676
+        },
+        "methodVersion": "Ganzoni 1970; cálculo de déficit total",
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "1.676,0",
+          "obtained": "1.676,0",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.hbiron",
+          "expected": 1176,
+          "obtained": 1176,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.reserve",
+          "expected": 500,
+          "obtained": 500,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.total",
+          "expected": 1676,
+          "obtained": 1676,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.hbiron",
+          "expected": 1176,
+          "obtained": 1176,
+          "tolerance": 1.176e-9,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.reserve",
+          "expected": 500,
+          "obtained": 500,
+          "tolerance": 5e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.total",
+          "expected": 1676,
+          "obtained": 1676,
+          "tolerance": 1.676e-9,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "1.676,0",
+          "obtained": "1.676,0",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "mg",
+          "obtained": "mg",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [],
+      "status": "passed"
+    },
+    {
+      "id": "deficit-de-ferro-ganzoni",
+      "index": 1,
+      "name": "Exemplo CADTH:50kg Hb11 alvo15 reserva500",
+      "input": {
+        "peso": 50,
+        "hb": 11,
+        "alvo": 15,
+        "reserva": 500
+      },
+      "expected": {
+        "raw": {
+          "hbiron": 480,
+          "reserve": 500,
+          "total": 980
+        },
+        "main": "980,0"
+      },
+      "obtained": {
+        "id": "deficit-de-ferro-ganzoni",
+        "main": [
+          "980,0",
+          "mg"
+        ],
+        "label": "Ganzoni · déficit total",
+        "raw": {
+          "hbiron": 480,
+          "reserve": 500,
+          "total": 980
+        },
+        "methodVersion": "Ganzoni 1970; cálculo de déficit total",
+        "clinicalValidation": "not-performed"
+      },
+      "browserVm": {
+        "id": "deficit-de-ferro-ganzoni",
+        "main": [
+          "980,0",
+          "mg"
+        ],
+        "label": "Ganzoni · déficit total",
+        "raw": {
+          "hbiron": 480,
+          "reserve": 500,
+          "total": 980
+        },
+        "methodVersion": "Ganzoni 1970; cálculo de déficit total",
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "980,0",
+          "obtained": "980,0",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.hbiron",
+          "expected": 480,
+          "obtained": 480,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.reserve",
+          "expected": 500,
+          "obtained": 500,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.total",
+          "expected": 980,
+          "obtained": 980,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.hbiron",
+          "expected": 480,
+          "obtained": 480,
+          "tolerance": 4.8e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.reserve",
+          "expected": 500,
+          "obtained": 500,
+          "tolerance": 5e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.total",
+          "expected": 980,
+          "obtained": 980,
+          "tolerance": 9.8e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "980,0",
+          "obtained": "980,0",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "mg",
+          "obtained": "mg",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [],
+      "status": "passed"
+    },
+    {
+      "id": "deficit-de-ferro-ganzoni",
+      "index": 2,
+      "name": "Exemplo CADTH:70kg Hb9 alvo15 reserva1000",
+      "input": {
+        "peso": 70,
+        "hb": 9,
+        "alvo": 15,
+        "reserva": 1000
+      },
+      "expected": {
+        "raw": {
+          "hbiron": 1008,
+          "reserve": 1000,
+          "total": 2008
+        },
+        "main": "2.008,0"
+      },
+      "obtained": {
+        "id": "deficit-de-ferro-ganzoni",
+        "main": [
+          "2.008,0",
+          "mg"
+        ],
+        "label": "Ganzoni · déficit total",
+        "raw": {
+          "hbiron": 1008,
+          "reserve": 1000,
+          "total": 2008
+        },
+        "methodVersion": "Ganzoni 1970; cálculo de déficit total",
+        "clinicalValidation": "not-performed"
+      },
+      "browserVm": {
+        "id": "deficit-de-ferro-ganzoni",
+        "main": [
+          "2.008,0",
+          "mg"
+        ],
+        "label": "Ganzoni · déficit total",
+        "raw": {
+          "hbiron": 1008,
+          "reserve": 1000,
+          "total": 2008
+        },
+        "methodVersion": "Ganzoni 1970; cálculo de déficit total",
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "2.008,0",
+          "obtained": "2.008,0",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.hbiron",
+          "expected": 1008,
+          "obtained": 1008,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.reserve",
+          "expected": 1000,
+          "obtained": 1000,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.total",
+          "expected": 2008,
+          "obtained": 2008,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.hbiron",
+          "expected": 1008,
+          "obtained": 1008,
+          "tolerance": 1.008e-9,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.reserve",
+          "expected": 1000,
+          "obtained": 1000,
+          "tolerance": 1e-9,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.total",
+          "expected": 2008,
+          "obtained": 2008,
+          "tolerance": 2.008e-9,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "2.008,0",
+          "obtained": "2.008,0",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "mg",
+          "obtained": "mg",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [],
+      "status": "passed"
+    },
+    {
+      "id": "deficit-de-ferro-ganzoni",
+      "index": 3,
+      "name": "Reserva zero explícita; Hb=alvo",
+      "input": {
+        "peso": 70,
+        "hb": 15,
+        "alvo": 15,
+        "reserva": 0
+      },
+      "expected": {
+        "raw": {
+          "hbiron": 0,
+          "reserve": 0,
+          "total": 0
+        },
+        "main": "0,0"
+      },
+      "obtained": {
+        "id": "deficit-de-ferro-ganzoni",
+        "main": [
+          "0,0",
+          "mg"
+        ],
+        "label": "Ganzoni · déficit total",
+        "raw": {
+          "hbiron": 0,
+          "reserve": 0,
+          "total": 0
+        },
+        "methodVersion": "Ganzoni 1970; cálculo de déficit total",
+        "clinicalValidation": "not-performed"
+      },
+      "browserVm": {
+        "id": "deficit-de-ferro-ganzoni",
+        "main": [
+          "0,0",
+          "mg"
+        ],
+        "label": "Ganzoni · déficit total",
+        "raw": {
+          "hbiron": 0,
+          "reserve": 0,
+          "total": 0
+        },
+        "methodVersion": "Ganzoni 1970; cálculo de déficit total",
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "0,0",
+          "obtained": "0,0",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.hbiron",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.reserve",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.total",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.hbiron",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.reserve",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.total",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "0,0",
+          "obtained": "0,0",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "mg",
+          "obtained": "mg",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [],
+      "status": "passed"
+    }
+  ],
+  "summary": {
+    "cases": 4,
+    "passed": 4,
+    "failed": 0,
+    "checks": 48
+  },
+  "newIndependentOracle": false,
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}

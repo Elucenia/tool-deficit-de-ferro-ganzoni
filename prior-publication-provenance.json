@@ -1,0 +1,149 @@
+{
+  "stage": "prepared-not-published",
+  "id": "deficit-de-ferro-ganzoni",
+  "repository": "Elucenia/tool-deficit-de-ferro-ganzoni",
+  "build": {
+    "id": "6QpMzbnUBE2fep9nyJzTM",
+    "directory": ".next-private-final36",
+    "receiptSha256": "05823c22753741cd9947b8a5edad0c3f232f5cc4e935d1015837524ac6c34d0b"
+  },
+  "baseline": {
+    "parentCommitSha": "685d01c467d1c3502871edb088cdee778161d73c",
+    "baseTreeSha": "a1fdf9f09b8bb892dd357729a0a6d20d874c4cd5",
+    "indexBlobSha": "c88562c81eb2e87cbfe2571e6044b549f3a3184a",
+    "protectedFiles": {
+      "LICENSE": {
+        "path": "LICENSE",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+        "size": 11358,
+        "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/d645695673349e3947e8e5ae42332d0ac3164cd7"
+      },
+      "NOTICE": {
+        "path": "NOTICE",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "acb8b9ea78b0f3579ddfa91e9e0c82c935635887",
+        "size": 1652,
+        "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/acb8b9ea78b0f3579ddfa91e9e0c82c935635887"
+      },
+      "AUTHORSHIP.md": {
+        "path": "AUTHORSHIP.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "17687ad22f12b81cb419bb05fb7e0e2bd33b8381",
+        "size": 3323,
+        "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/17687ad22f12b81cb419bb05fb7e0e2bd33b8381"
+      },
+      "CITATION.cff": {
+        "path": "CITATION.cff",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f06ee5422db201e6d62bd15fa0268abbda55b7fa",
+        "size": 931,
+        "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/f06ee5422db201e6d62bd15fa0268abbda55b7fa"
+      },
+      "SECURITY.md": {
+        "path": "SECURITY.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "44eafb996937916cbe53e24fa9c5208fe03d5767",
+        "size": 894,
+        "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/44eafb996937916cbe53e24fa9c5208fe03d5767"
+      },
+      "CONTRIBUTING.md": {
+        "path": "CONTRIBUTING.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6c52ca42d41e4d1d913ba00628aa9e05ae57cc5f",
+        "size": 1475,
+        "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/6c52ca42d41e4d1d913ba00628aa9e05ae57cc5f"
+      },
+      ".github/workflows/ci.yml": {
+        "path": ".github/workflows/ci.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7d3f2f34aa2e948d30695d82d64361467d9e6485",
+        "size": 279,
+        "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/7d3f2f34aa2e948d30695d82d64361467d9e6485"
+      },
+      ".gitattributes": {
+        "path": ".gitattributes",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+        "size": 19,
+        "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/6313b56c57848efce05faa7aa7e901ccfc2886ea"
+      },
+      ".gitignore": {
+        "path": ".gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e375bd25cf1a574310ac4c7af0299884556e81e1",
+        "size": 42,
+        "url": "https://api.github.com/repos/Elucenia/tool-deficit-de-ferro-ganzoni/git/blobs/e375bd25cf1a574310ac4c7af0299884556e81e1"
+      }
+    }
+  },
+  "methodSourceModules": [
+    "calculator.js",
+    "runtime/restored-methods.cjs",
+    "runtime/restoration-original-tools.json"
+  ],
+  "implementationBrowserSha256": "fea57fc0950b718d7a12b822aadd2baa6530bde20d93c0b5d476ff10abc0f745",
+  "localeDataSha256": "263fb582765181936f230a7a2622a81a06a5a891e0503b2112de46c72a008034",
+  "originalStyleSha256": "8fd25e9dc1c0980e3b39b2375d36b96276eec3cbc24284cbc3cc01dc00a67a5c",
+  "originalIndexSha256": "ca92f0b92aca1b2b807fb11eedf455d8aef32e743fd2a0c6b12b52bff3e735b3",
+  "example": {
+    "label": "Current source-owned complete UI/API fixture",
+    "input": {
+      "peso": 70,
+      "hb": 8,
+      "alvo": 15,
+      "reserva": 500
+    },
+    "expected": {
+      "raw": {
+        "hbiron": 1176,
+        "reserve": 500,
+        "total": 1676
+      },
+      "main": "1.676,0"
+    },
+    "obtained": {
+      "id": "deficit-de-ferro-ganzoni",
+      "main": [
+        "1.676,0",
+        "mg"
+      ],
+      "label": "Ganzoni · déficit total",
+      "raw": {
+        "hbiron": 1176,
+        "reserve": 500,
+        "total": 1676
+      },
+      "methodVersion": "Ganzoni 1970; cálculo de déficit total",
+      "clinicalValidation": "not-performed"
+    },
+    "scope": "Source-owned example Node/browser wiring parity; not a new clinical oracle"
+  },
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed",
+  "documentationLocales": [
+    "pt-BR",
+    "en",
+    "es",
+    "fr",
+    "de",
+    "it",
+    "ar",
+    "zh",
+    "ja",
+    "hi"
+  ],
+  "documentationTemplateSha256": "ae4c41b39ab92a14adbfab83b946751a75c8168b5927e1f808d1c629ec032ea4",
+  "appWrites": false,
+  "externalMutations": false
+}

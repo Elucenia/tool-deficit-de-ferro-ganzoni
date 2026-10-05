@@ -1,0 +1,1026 @@
+{
+  "receipt": {
+    "file": "reports/review-20261005-completion/deploy-lock/r5-all-calculators-http-results.json",
+    "bytes": 7105457,
+    "sha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7"
+  },
+  "build": {
+    "id": "RYDdJbZxqrM8sgoyKEQc-",
+    "standaloneServer": {
+      "file": "reports/review-20261005-completion/deploy-lock/r5-isolated-runtime/.next/standalone/server.js",
+      "sha256": "631d43264038e7aa367b5405041eb3706d73fd3366925a7ef17a07119cfa166e",
+      "bytes": 10457
+    },
+    "catalogPin": {
+      "file": "deliveries/elucenia-next-hostinger-r5/.next/server/pages/en/tools.json",
+      "sha256": "33917dfdae9bea59cae22bfca34eaef2a21046a832af98c1a8d2718075de63ec",
+      "bytes": 103793
+    }
+  },
+  "scope": {
+    "syntheticDataOnly": true,
+    "applicationModuleImports": 0,
+    "browserInteractions": 0,
+    "newIndependentOracles": 0,
+    "nativeSourceReferenceCases": 882,
+    "additionalDecimalCases": 4,
+    "clinicalApproval": false,
+    "professionalLanguageApproval": false,
+    "populationValidation": false,
+    "hostingerDeploymentVerified": false,
+    "actualHTTPExecution": true,
+    "standaloneNodeServer": true,
+    "nodeVersion": "v22.18.0",
+    "noNewClinicalOrProfessionalApproval": true,
+    "pubmedResourceIsNotCalculatorAndNotIncludedIn222": true,
+    "description": "All 882 existing reference cases across the 218 native calculators plus four existing Decimal50 examples, executed via HTTP against the final local r5 standalone build. Raw precise source-audit comparisons are transport regressions, not independent clinical or full-method validation."
+  },
+  "tool": {
+    "id": "deficit-de-ferro-ganzoni",
+    "title": "Déficit de ferro (Ganzoni)",
+    "methodVersion": "Ganzoni 1970; cálculo de déficit total",
+    "implementationVersion": "deficit-de-ferro-ganzoni@native-2026-10-04+c1235a2c3390",
+    "sources": [
+      [
+        "CADTH · Monoferric · tabela 12: fórmula de Ganzoni e exemplos",
+        "https://www.cda-amc.ca/sites/default/files/cdr/pharmacoeconomic/sr0622-monoferric-pharmacoeconomic-review-report.pdf"
+      ],
+      [
+        "Ganzoni AM. Intravenöses Eisen-Dextran: therapeutische und experimentelle Möglichkeiten [Intravenous iron-dextran: therapeutic and experimental possibilities]. Schweiz Med Wochenschr, 1970.",
+        "https://pubmed.ncbi.nlm.nih.gov/5413918/"
+      ],
+      [
+        "Evstatiev R et al. FERGIcor, a randomized controlled trial on ferric carboxymaltose for iron deficiency anemia in inflammatory bowel disease. Gastroenterology, 2011.",
+        "https://doi.org/10.1053/j.gastro.2011.06.005"
+      ]
+    ],
+    "limits": "Hb-alvo e reserva são informados pelo profissional; não há seleção automática. O déficit total não é dose por aplicação, esquema de administração nem indicação de ferro intravenoso.",
+    "sourceEditionEvidence": [
+      {
+        "citation": "CADTH · Monoferric · tabela 12: fórmula de Ganzoni e exemplos",
+        "url": "https://www.cda-amc.ca/sites/default/files/cdr/pharmacoeconomic/sr0622-monoferric-pharmacoeconomic-review-report.pdf",
+        "class": "existing-source-record-transcribed",
+        "declaredCitationPreserved": true,
+        "sourceIdentityRecheckedInThisNormalization": false,
+        "publicationEditionConfirmationInThisNormalization": "not-performed",
+        "fullTextRetrievalInThisNormalization": false,
+        "formulaConformance": "not-assessed"
+      },
+      {
+        "citation": "Ganzoni AM. Intravenöses Eisen-Dextran: therapeutische und experimentelle Möglichkeiten [Intravenous iron-dextran: therapeutic and experimental possibilities]. Schweiz Med Wochenschr, 1970.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/5413918/",
+        "class": "existing-source-record-transcribed",
+        "declaredCitationPreserved": true,
+        "sourceIdentityRecheckedInThisNormalization": false,
+        "publicationEditionConfirmationInThisNormalization": "not-performed",
+        "fullTextRetrievalInThisNormalization": false,
+        "formulaConformance": "not-assessed"
+      },
+      {
+        "citation": "Evstatiev R et al. FERGIcor, a randomized controlled trial on ferric carboxymaltose for iron deficiency anemia in inflammatory bowel disease. Gastroenterology, 2011.",
+        "url": "https://doi.org/10.1053/j.gastro.2011.06.005",
+        "class": "existing-source-record-transcribed",
+        "declaredCitationPreserved": true,
+        "sourceIdentityRecheckedInThisNormalization": false,
+        "publicationEditionConfirmationInThisNormalization": "not-performed",
+        "fullTextRetrievalInThisNormalization": false,
+        "formulaConformance": "not-assessed"
+      }
+    ],
+    "calculator": {
+      "file": "deliveries/elucenia-next-hostinger-r5/private/tool-code/deficit-de-ferro-ganzoni/calculator.js",
+      "sha256": "c1235a2c3390622efe2e656ffdd8b0030641e3ee9d2d5a9ce80341f94a5e4541",
+      "bytes": 509
+    },
+    "cases": 4,
+    "clinicalApproval": false,
+    "professionalLanguageApproval": false,
+    "replayed": 4,
+    "passed": 4,
+    "failed": 0,
+    "status": "passed"
+  },
+  "results": [
+    {
+      "id": "deficit-de-ferro-ganzoni",
+      "kind": "native-source-reference",
+      "index": 0,
+      "name": "Vetor sintético principal de referência",
+      "originalInput": {
+        "peso": 70,
+        "hb": 8,
+        "alvo": 15,
+        "reserva": 500
+      },
+      "input": {
+        "peso": 70,
+        "hb": 8,
+        "alvo": 15,
+        "reserva": 500
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "hbiron": 1176,
+          "reserve": 500,
+          "total": 1676
+        },
+        "main": "1.676,0"
+      },
+      "recordedResult": {
+        "main": [
+          "1.676,0",
+          "mg"
+        ],
+        "label": "Ganzoni · déficit total",
+        "raw": {
+          "hbiron": 1176,
+          "reserve": 500,
+          "total": 1676
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "da6d27d65bcaed56528da83bd0ffaa3d407fc467ea7f9cb67ec40a1a78c6febf",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r5/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3062/api/tools/deficit-de-ferro-ganzoni/calculate",
+        "origin": "http://127.0.0.1:3062",
+        "payload": {
+          "input": {
+            "peso": 70,
+            "hb": 8,
+            "alvo": 15,
+            "reserva": 500
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3062/api/tools/deficit-de-ferro-ganzoni/calculate",
+          "startedAt": "2026-10-05T15:13:33.466Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "deficit-de-ferro-ganzoni",
+              "main": [
+                "1.676,0",
+                "mg"
+              ],
+              "label": "Ganzoni · déficit total",
+              "raw": {
+                "hbiron": 1176,
+                "reserve": 500,
+                "total": 1676
+              },
+              "methodVersion": "Ganzoni 1970; cálculo de déficit total",
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "181ea9faf0f193339149a2a2b3c887bcfafd1d1aee0bdd3df1e326f2b66e4493",
+          "bytes": 249,
+          "elapsedMs": 3.0313999999998487
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3062/api/tools/deficit-de-ferro-ganzoni/calculate",
+        "startedAt": "2026-10-05T15:13:33.466Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "deficit-de-ferro-ganzoni",
+            "main": [
+              "1.676,0",
+              "mg"
+            ],
+            "label": "Ganzoni · déficit total",
+            "raw": {
+              "hbiron": 1176,
+              "reserve": 500,
+              "total": 1676
+            },
+            "methodVersion": "Ganzoni 1970; cálculo de déficit total",
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "181ea9faf0f193339149a2a2b3c887bcfafd1d1aee0bdd3df1e326f2b66e4493",
+        "bytes": 249,
+        "elapsedMs": 3.0313999999998487
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "1.676,0",
+            "obtained": "1.676,0",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.hbiron",
+            "expected": 1176,
+            "obtained": 1176,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.reserve",
+            "expected": 500,
+            "obtained": 500,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.total",
+            "expected": 1676,
+            "obtained": 1676,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.hbiron",
+            "expected": 1176,
+            "obtained": 1176,
+            "tolerance": 1.176e-9,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.reserve",
+            "expected": 500,
+            "obtained": 500,
+            "tolerance": 5e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.total",
+            "expected": 1676,
+            "obtained": 1676,
+            "tolerance": 1.676e-9,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "1.676,0",
+            "obtained": "1.676,0",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "mg",
+            "obtained": "mg",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": []
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "deficit-de-ferro-ganzoni",
+      "kind": "native-source-reference",
+      "index": 1,
+      "name": "Exemplo CADTH:50kg Hb11 alvo15 reserva500",
+      "originalInput": {
+        "peso": 50,
+        "hb": 11,
+        "alvo": 15,
+        "reserva": 500
+      },
+      "input": {
+        "peso": 50,
+        "hb": 11,
+        "alvo": 15,
+        "reserva": 500
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "hbiron": 480,
+          "reserve": 500,
+          "total": 980
+        },
+        "main": "980,0"
+      },
+      "recordedResult": {
+        "main": [
+          "980,0",
+          "mg"
+        ],
+        "label": "Ganzoni · déficit total",
+        "raw": {
+          "hbiron": 480,
+          "reserve": 500,
+          "total": 980
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "da6d27d65bcaed56528da83bd0ffaa3d407fc467ea7f9cb67ec40a1a78c6febf",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r5/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3062/api/tools/deficit-de-ferro-ganzoni/calculate",
+        "origin": "http://127.0.0.1:3062",
+        "payload": {
+          "input": {
+            "peso": 50,
+            "hb": 11,
+            "alvo": 15,
+            "reserva": 500
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3062/api/tools/deficit-de-ferro-ganzoni/calculate",
+          "startedAt": "2026-10-05T15:13:33.781Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "deficit-de-ferro-ganzoni",
+              "main": [
+                "980,0",
+                "mg"
+              ],
+              "label": "Ganzoni · déficit total",
+              "raw": {
+                "hbiron": 480,
+                "reserve": 500,
+                "total": 980
+              },
+              "methodVersion": "Ganzoni 1970; cálculo de déficit total",
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "28ca71b2b65800dda85b6fa4e15d5e2af0328adffdd757f0a076cdf8beccfe71",
+          "bytes": 245,
+          "elapsedMs": 3.889899999994668
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3062/api/tools/deficit-de-ferro-ganzoni/calculate",
+        "startedAt": "2026-10-05T15:13:33.781Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "deficit-de-ferro-ganzoni",
+            "main": [
+              "980,0",
+              "mg"
+            ],
+            "label": "Ganzoni · déficit total",
+            "raw": {
+              "hbiron": 480,
+              "reserve": 500,
+              "total": 980
+            },
+            "methodVersion": "Ganzoni 1970; cálculo de déficit total",
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "28ca71b2b65800dda85b6fa4e15d5e2af0328adffdd757f0a076cdf8beccfe71",
+        "bytes": 245,
+        "elapsedMs": 3.889899999994668
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "980,0",
+            "obtained": "980,0",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.hbiron",
+            "expected": 480,
+            "obtained": 480,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.reserve",
+            "expected": 500,
+            "obtained": 500,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.total",
+            "expected": 980,
+            "obtained": 980,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.hbiron",
+            "expected": 480,
+            "obtained": 480,
+            "tolerance": 4.8e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.reserve",
+            "expected": 500,
+            "obtained": 500,
+            "tolerance": 5e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.total",
+            "expected": 980,
+            "obtained": 980,
+            "tolerance": 9.8e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "980,0",
+            "obtained": "980,0",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "mg",
+            "obtained": "mg",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": []
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "deficit-de-ferro-ganzoni",
+      "kind": "native-source-reference",
+      "index": 2,
+      "name": "Exemplo CADTH:70kg Hb9 alvo15 reserva1000",
+      "originalInput": {
+        "peso": 70,
+        "hb": 9,
+        "alvo": 15,
+        "reserva": 1000
+      },
+      "input": {
+        "peso": 70,
+        "hb": 9,
+        "alvo": 15,
+        "reserva": 1000
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "hbiron": 1008,
+          "reserve": 1000,
+          "total": 2008
+        },
+        "main": "2.008,0"
+      },
+      "recordedResult": {
+        "main": [
+          "2.008,0",
+          "mg"
+        ],
+        "label": "Ganzoni · déficit total",
+        "raw": {
+          "hbiron": 1008,
+          "reserve": 1000,
+          "total": 2008
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "da6d27d65bcaed56528da83bd0ffaa3d407fc467ea7f9cb67ec40a1a78c6febf",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r5/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3062/api/tools/deficit-de-ferro-ganzoni/calculate",
+        "origin": "http://127.0.0.1:3062",
+        "payload": {
+          "input": {
+            "peso": 70,
+            "hb": 9,
+            "alvo": 15,
+            "reserva": 1000
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3062/api/tools/deficit-de-ferro-ganzoni/calculate",
+          "startedAt": "2026-10-05T15:13:34.095Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "deficit-de-ferro-ganzoni",
+              "main": [
+                "2.008,0",
+                "mg"
+              ],
+              "label": "Ganzoni · déficit total",
+              "raw": {
+                "hbiron": 1008,
+                "reserve": 1000,
+                "total": 2008
+              },
+              "methodVersion": "Ganzoni 1970; cálculo de déficit total",
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "0b2f237c6ff206f02ab8805a698324664274a1d81a4ca1e2c160de260f537a25",
+          "bytes": 250,
+          "elapsedMs": 3.6154999999998836
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3062/api/tools/deficit-de-ferro-ganzoni/calculate",
+        "startedAt": "2026-10-05T15:13:34.095Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "deficit-de-ferro-ganzoni",
+            "main": [
+              "2.008,0",
+              "mg"
+            ],
+            "label": "Ganzoni · déficit total",
+            "raw": {
+              "hbiron": 1008,
+              "reserve": 1000,
+              "total": 2008
+            },
+            "methodVersion": "Ganzoni 1970; cálculo de déficit total",
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "0b2f237c6ff206f02ab8805a698324664274a1d81a4ca1e2c160de260f537a25",
+        "bytes": 250,
+        "elapsedMs": 3.6154999999998836
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "2.008,0",
+            "obtained": "2.008,0",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.hbiron",
+            "expected": 1008,
+            "obtained": 1008,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.reserve",
+            "expected": 1000,
+            "obtained": 1000,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.total",
+            "expected": 2008,
+            "obtained": 2008,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.hbiron",
+            "expected": 1008,
+            "obtained": 1008,
+            "tolerance": 1.008e-9,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.reserve",
+            "expected": 1000,
+            "obtained": 1000,
+            "tolerance": 1e-9,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.total",
+            "expected": 2008,
+            "obtained": 2008,
+            "tolerance": 2.008e-9,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "2.008,0",
+            "obtained": "2.008,0",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "mg",
+            "obtained": "mg",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": []
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "deficit-de-ferro-ganzoni",
+      "kind": "native-source-reference",
+      "index": 3,
+      "name": "Reserva zero explícita; Hb=alvo",
+      "originalInput": {
+        "peso": 70,
+        "hb": 15,
+        "alvo": 15,
+        "reserva": 0
+      },
+      "input": {
+        "peso": 70,
+        "hb": 15,
+        "alvo": 15,
+        "reserva": 0
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "hbiron": 0,
+          "reserve": 0,
+          "total": 0
+        },
+        "main": "0,0"
+      },
+      "recordedResult": {
+        "main": [
+          "0,0",
+          "mg"
+        ],
+        "label": "Ganzoni · déficit total",
+        "raw": {
+          "hbiron": 0,
+          "reserve": 0,
+          "total": 0
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "da6d27d65bcaed56528da83bd0ffaa3d407fc467ea7f9cb67ec40a1a78c6febf",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r5/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3062/api/tools/deficit-de-ferro-ganzoni/calculate",
+        "origin": "http://127.0.0.1:3062",
+        "payload": {
+          "input": {
+            "peso": 70,
+            "hb": 15,
+            "alvo": 15,
+            "reserva": 0
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3062/api/tools/deficit-de-ferro-ganzoni/calculate",
+          "startedAt": "2026-10-05T15:13:34.406Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "deficit-de-ferro-ganzoni",
+              "main": [
+                "0,0",
+                "mg"
+              ],
+              "label": "Ganzoni · déficit total",
+              "raw": {
+                "hbiron": 0,
+                "reserve": 0,
+                "total": 0
+              },
+              "methodVersion": "Ganzoni 1970; cálculo de déficit total",
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "7ea0b711edb72d7cc9f52fda7dff6cef8ffe97d5e2b40c8c9d4d11ccae87ff0c",
+          "bytes": 237,
+          "elapsedMs": 3.2379000000000815
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3062/api/tools/deficit-de-ferro-ganzoni/calculate",
+        "startedAt": "2026-10-05T15:13:34.406Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "deficit-de-ferro-ganzoni",
+            "main": [
+              "0,0",
+              "mg"
+            ],
+            "label": "Ganzoni · déficit total",
+            "raw": {
+              "hbiron": 0,
+              "reserve": 0,
+              "total": 0
+            },
+            "methodVersion": "Ganzoni 1970; cálculo de déficit total",
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "7ea0b711edb72d7cc9f52fda7dff6cef8ffe97d5e2b40c8c9d4d11ccae87ff0c",
+        "bytes": 237,
+        "elapsedMs": 3.2379000000000815
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "0,0",
+            "obtained": "0,0",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.hbiron",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.reserve",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.total",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.hbiron",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.reserve",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.total",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "0,0",
+            "obtained": "0,0",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "mg",
+            "obtained": "mg",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": []
+      },
+      "status": "passed",
+      "error": null
+    }
+  ],
+  "endBindings": true
+}

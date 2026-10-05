@@ -1,0 +1,54 @@
+[
+  {
+    "id": "deficit-de-ferro-ganzoni",
+    "title": "Déficit de ferro (Ganzoni)",
+    "fields": [
+      [
+        "peso",
+        "Peso",
+        "num",
+        {
+          "min": 5,
+          "max": 250,
+          "step": 0.1,
+          "unit": "kg",
+          "ph": "70"
+        }
+      ],
+      [
+        "hb",
+        "Hemoglobina atual",
+        "num",
+        {
+          "min": 3,
+          "max": 18,
+          "step": 0.1,
+          "unit": "g/dL",
+          "ph": "8"
+        }
+      ],
+      [
+        "alvo",
+        "Hemoglobina-alvo",
+        "num",
+        {
+          "min": 8,
+          "max": 16,
+          "step": 0.1,
+          "unit": "g/dL",
+          "ph": "15"
+        }
+      ]
+    ],
+    "sources": [
+      [
+        "Ganzoni AM. Intravenöses Eisen-Dextran: therapeutische und experimentelle Möglichkeiten [Intravenous iron-dextran: therapeutic and experimental possibilities]. Schweiz Med Wochenschr, 1970.",
+        "https://pubmed.ncbi.nlm.nih.gov/5413918/"
+      ],
+      [
+        "Evstatiev R et al. FERGIcor, a randomized controlled trial on ferric carboxymaltose for iron deficiency anemia in inflammatory bowel disease. Gastroenterology, 2011.",
+        "https://doi.org/10.1053/j.gastro.2011.06.005"
+      ]
+    ]
+  }
+]
